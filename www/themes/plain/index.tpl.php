@@ -27,7 +27,7 @@
       </ul>
     <? if (empty($files)): ?>
       <div class="alert alert-dismissible alert-warning">
-        <h4>No files found.</h4>
+        This dircetory does not contain any files.
       </div>
     <? else: ?>
       <table class="table table-striped table-hover ">
@@ -52,18 +52,22 @@
                 </tr>
               <? endif; ?>
 
-
                <? foreach ($files as $key => $info): ?>
                     <? $asTorrent = (!is_null($config['torrent-threshold']) && $info['size'] > $config['torrent-threshold']); ?>
                     <tr>
 
-                      <td>
+
                       <? if (is_array($info['files'])): ?>
+                      <td>
+                      <i class="fa fa-folder-open" aria-hidden="true"></i>
                         <a href="<?= $config['base-path'] ?>/<?= $info['path'] ?>">
-                          <i class="fa fa-folder-open" aria-hidden="true"></i>
                           <span><?= $key ?></span>
                         </a>
+                        </td>
+                        <td></td>
+                        <td></td>
                       <? else: ?>
+                      <td>
                       <i class="fa fa-file" aria-hidden="true"></i>
                          <a href="<?= $config['bucket-url-prefix'] ?>/<?= $info['path'] ?><? if ($asTorrent): ?>?torrent<? endif; ?>" <? if (isset($config['google-analytics-id'])): ?><? endif; ?>
                         <span><?= $key ?></span>
