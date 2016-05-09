@@ -31,11 +31,6 @@
         <h4>No files found.</h4>
       </div>
     <? else: ?>
-
-
-
-
-
       <table class="table table-striped table-hover ">
           <thead>
           <tr>
@@ -77,14 +72,13 @@
                       <td>
                       <span class="size"><?= $info['hsize'] ?></span>
                       </td>
-                      <td>
-                      <a href="<?= $config['bucket-url-prefix'] ?>">
+                      <td style="text-align:center;">
+                      <a href="<?= $config['base-path'] ?>/<?= $info['path'] ?>">
                                             <i class="fa fa-download" aria-hidden="true" style="font-size: 2rem"></i>
 
                       </a>
                       </td>
                       <? endif; ?>
-
                      </td>
                   </tr>
                   <? endforeach; ?>
