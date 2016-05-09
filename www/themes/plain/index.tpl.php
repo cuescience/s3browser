@@ -3,8 +3,8 @@
    "http://www.w3.org/TR/html4/strict.dtd">
 
 <html lang="en">
-<link rel="stylesheet" href="http://bootswatch.com/cosmo/bootstrap.min.css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+<link rel="stylesheet" href="//bootswatch.com/cosmo/bootstrap.min.css"/>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Index of <?= $config['bucket-name'].$dir ?></title>
@@ -17,7 +17,6 @@
 </div>
 
   <div id="contents" class="container">
-    
       <ul class="breadcrumb">
          <li><a href="<?= $config['base-path'] ?>/"><?= $config['bucket-name'] ?>/</a></li>
         <? foreach (S3Browser::getBreadcrumb($dir) as $key => $name): ?>
@@ -73,8 +72,8 @@
                       <span class="size"><?= $info['hsize'] ?></span>
                       </td>
                       <td style="text-align:center;">
-                      <a href="<?= $config['base-path'] ?>/<?= $info['path'] ?>">
-                                            <i class="fa fa-download" aria-hidden="true" style="font-size: 2rem"></i>
+                      <a href="<?= $config['bucket-url-prefix'] ?>/<?= $info['path'] ?><? if ($asTorrent): ?>?torrent<? endif; ?>">
+                            <i class="fa fa-download" aria-hidden="true" style="font-size: 2rem"></i>
 
                       </a>
                       </td>
