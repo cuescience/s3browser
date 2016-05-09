@@ -16,7 +16,7 @@
     </div>
 </div>
 
-  <div id="contents">
+  <div id="contents" class="container">
     
       <ul class="breadcrumb">
          <li><a href="<?= $config['base-path'] ?>/"><?= $config['bucket-name'] ?>/</a></li>
@@ -80,7 +80,7 @@
                       <span class="size"><?= $info['hsize'] ?></span>
                       </td>
                       <td>
-                      <a href="<?= $config['bucket-url-prefix'] ?>
+                      <a href="<?= $config['bucket-url-prefix'] ?>">
                                             <i class="fa fa-download" aria-hidden="true" style="font-size: 2rem"></i>
 
                       </a>
