@@ -26,15 +26,13 @@
                 <? endif; ?>
                 <? endforeach ?>
       </ul>
-    </div>
-  
     <? if (empty($files)): ?>
-      <p>No files found.</p>
+      <div class="alert alert-dismissible alert-warning">
+        <h4>No files found.</h4>
+      </div>
     <? else: ?>
-    <ul>
 
-    </ul>
-    <? endif; ?>
+
 
 
 
@@ -92,7 +90,7 @@
                   <? endforeach; ?>
           </tbody>
           </table>
-
+       <? endif; ?>
 
 
 
