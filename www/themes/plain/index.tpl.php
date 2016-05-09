@@ -3,7 +3,8 @@
    "http://www.w3.org/TR/html4/strict.dtd">
 
 <html lang="en">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<link rel="stylesheet" href="http://bootswatch.com/cosmo/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Index of <?= $config['bucket-name'].$dir ?></title>
